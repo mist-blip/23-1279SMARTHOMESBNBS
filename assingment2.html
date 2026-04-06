@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartHomes Airbnb</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #121212;
+    color: white;
+}
+
+
+nav {
+    background: #ff385c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae') center/cover;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.search input {
+    padding: 10px;
+    width: 200px;
+}
+
+/* LISTINGS */
+.listings {
+    padding: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 0 10px 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* VIDEOS */
+.videos {
+    padding: 30px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* FORMATTING SECTION */
+.format-section {
+    padding: 30px;
+    background: #0f0f0f;
+    color: #fff;
+}
+.format-section p {
+    margin: 6px 0;
+}
+.format-section blockquote {
+    border-left: 4px solid #ff385c;
+    padding-left: 12px;
+    color: #ddd;
+}
+.format-section blockquote.indented {
+    margin-left: 40px;
+}
+.format-section .inline-footer {
+    background: #111;
+    color: #ddd;
+    padding: 8px;
+    font-size: 0.95rem;
+}
+.format-section pre {
+    background: #111;
+    color: #e6e6e6;
+    padding: 10px;
+    overflow: auto;
+}
+.format-section .lists { display:flex; gap:40px; flex-wrap:wrap; }
+.format-section table { border-collapse: collapse; width:100%; margin-top:12px; }
+.format-section table th, .format-section table td { border: 1px solid #333; padding:6px; text-align:center; }
+.format-section .nested ul { margin-left: 18px; }
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>🏠 SmartHomes</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Listings</a>
+        <a href="#">Bookings</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Find Your Perfect Stay</h1>
+    <div class="search">
+        <input type="text" placeholder="Search Nairobi...">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- LISTINGS -->
+<div class="listings">
+    <h2>Popular Stays</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Luxury Apartment</h3>
+            <p>Nairobi • Ksh 5,000/night</p>
+        </div>
+
+        <div class="card">
+            <h3>Cozy Studio</h3>
+            <p>Westlands • Ksh 3,000/night</p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Villa</h3>
+            <p>Kilimani • Ksh 8,000/night</p>
+        </div>
+
+        <div class="card">
+            <h3>City View Condo</h3>
+            <p>CBD • Ksh 4,500/night</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<!-- FORMATTING DEMO SECTION -->
+<section class="format-section" aria-labelledby="format-heading">
+    <h2 id="format-heading">Formatting Demo</h2>
+
+    <!-- 1. Bold -->
+    <p><strong>Line 1: bold. — Luxury Apartment: 2BR, 1BA near CBD; Ksh 5,000/night; free Wi-Fi.</strong></p>
+
+    <!-- 2. Italics -->
+    <p><em>Line 2: italicized. — Cozy Studio in Westlands: 1BR, kitchenette, great for solo travelers; Ksh 3,000/night.</em></p>
+
+    <!-- 3. Underline -->
+    <p><u>Line 3: underlined. — Modern Villa, Kilimani: 4BR, private pool, family-friendly; Ksh 8,000/night.</u></p>
+
+    <!-- 4. Superscript -->
+    <p><sup>Line 4: Superscript example — Host: Jane Doe (Superhost)</sup></p>
+
+    <!-- 5. Subscript -->
+    <p><sub>Line 5: Subscript example — Cleaning fee: Ksh 500; Security deposit: Ksh 2,000.</sub></p>
+
+    <!-- 6. Strikethrough -->
+    <p><s>Line 6: stroked/struck-through. — Temporarily unavailable for booking (maintenance)</s></p>
+
+    <!-- 7. Highlight -->
+    <p><mark>Line 7: This line is highlighted. — Highlights: fast Wi-Fi, workspace, street parking, pet-friendly on request.</mark></p>
+
+    <!-- 8. Quotation -->
+    <blockquote>Line 8: This is a quoted block (standard). — Guest review: "Fantastic host, clean place, excellent location."</blockquote>
+
+    <!-- 9. Indented quotation -->
+    <blockquote class="indented">Line 9: This is an indented quotation. — Host reply: "Thanks for the kind words — welcome back anytime!"</blockquote>
+
+    <!-- 10. Footer (inline sample) -->
+    <footer class="inline-footer">Line 10: Sample footer for this section. — Contact: smarthomesairbnbs@gmail.com | 0718292182</footer>
+
+    <!-- 11. Line breaks -->
+    <p>Line 11: Luxury Apartment — 2BR<br>Price: Ksh 5,000/night<br>Amenities: Wi-Fi, Kitchen, Parking</p>
+
+    <!-- 12. 3x HR and 3 lines preformatted -->
+    <hr>
+    <hr>
+    <hr>
+
+    <pre>
+Line 12 - pre line 1: Check-in 14:00, Check-out 11:00
+Line 12 - pre line 2: Cancellation: Free until 48 hours before arrival
+Line 12 - pre line 3: House rules: No smoking, no parties
+    </pre>
+
+    <!-- 14. Unbooked and Booked houses lists (5 each) -->
+    <div class="lists" aria-label="house-lists">
+        <div>
+            <h3>Unbooked Houses</h3>
+            <ul>
+                <li>Luxury Apartment — Nairobi; 2BR • Ksh 5,000/night • 4.8★</li>
+                <li>Cozy Studio — Westlands; 1BR • Ksh 3,000/night • 4.5★</li>
+                <li>Modern Villa — Kilimani; 4BR • Ksh 8,000/night • 4.9★</li>
+                <li>City View Condo — CBD; 2BR • Ksh 4,500/night • 4.6★</li>
+                <li>Garden Cottage — Karen; 3BR • Ksh 6,200/night • 4.7★</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Booked Houses</h3>
+            <ul>
+                <li>Booked - Lakeview Retreat — Available from 10 May</li>
+                <li>Booked - Downtown Loft — Available from 20 Apr</li>
+                <li>Booked - Beachside Bungalow — Available from 1 Jun</li>
+                <li>Booked - Mountain Cabin — Available from 5 May</li>
+                <li>Booked - Riverside Suite — Available from 28 Apr</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 16. Nested list with 6 houses -->
+    <div class="nested">
+        <h3>Nested Houses</h3>
+        <ul>
+            <li>Region A
+                <ul>
+                    <li>Region A - Hilltop Haven — 3BR, panoramic views</li>
+                    <li>Region A - Orchard Villa — 2BR, private garden</li>
+                    <li>Region A - Riverside Cottage — 1BR, river access</li>
+                    <li>Region A - Sunset Bungalow — 2BR, outdoor deck</li>
+                    <li>Region A - Forest Lodge — 4BR, fireplace</li>
+                    <li>Region A - Coastal Escape — 3BR, near beach</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 17. Table: 10 columns x 5 rows -->
+    <h3>Property Data (10 cols × 5 rows)</h3>
+    <table aria-label="property-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Location</th>
+                <th>Beds</th>
+                <th>Baths</th>
+                <th>Price</th>
+                <th>Host</th>
+                <th>Rating</th>
+                <th>Guests</th>
+                <th>Availability</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Luxury Apartment</td><td>Nairobi</td><td>2</td><td>1</td><td>Ksh 5,000</td>
+                <td>Jane Doe</td><td>4.8</td><td>4</td><td>Available</td><td>Free Wi-Fi, Kitchen</td>
+            </tr>
+            <tr>
+                <td>Cozy Studio</td><td>Westlands</td><td>1</td><td>1</td><td>Ksh 3,000</td>
+                <td>Samir K.</td><td>4.5</td><td>2</td><td>Available</td><td>Kitchenette</td>
+            </tr>
+            <tr>
+                <td>Modern Villa</td><td>Kilimani</td><td>4</td><td>3</td><td>Ksh 8,000</td>
+                <td>Olivia M.</td><td>4.9</td><td>8</td><td>Available</td><td>Private pool</td>
+            </tr>
+            <tr>
+                <td>City View Condo</td><td>CBD</td><td>2</td><td>2</td><td>Ksh 4,500</td>
+                <td>Lina W.</td><td>4.6</td><td>4</td><td>Available</td><td>City skyline view</td>
+            </tr>
+            <tr>
+                <td>Garden Cottage</td><td>Karen</td><td>3</td><td>2</td><td>Ksh 6,200</td>
+                <td>Tom & Ana</td><td>4.7</td><td>6</td><td>Available</td><td>Private garden</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<footer>
+    📞 0718292182 | 📧 smarthomesairbnbs@gmail.com
+</footer>
+
+</body>
+</html>
