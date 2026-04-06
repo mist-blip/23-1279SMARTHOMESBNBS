@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartHomes Airbnb</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #121212;
+    color: white;
+}
+
+/* Center everything on the page */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:100vh;text-align:center}
+
+/* Constrain major content areas for readability while keeping centered */
+.hero,.listings,.videos,footer,nav{width:100%;max-width:980px}
+
+/* Make navbar stack and center */
+nav{background:#ff385c;padding:15px;display:flex;flex-direction:column;align-items:center}
+nav h2{margin:0}
+nav div{margin-top:8px}
+
+/* NAVBAR */
+nav {
+    background: #ff385c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 16px;
+    background: url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae') center/cover;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.search input {
+    padding: 10px;
+    width: 200px;
+}
+
+/* LISTINGS */
+.listings {
+    padding: 30px 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center; /* center grid items */
+}
+
+.card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 320px; /* keep cards a readable width */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    display:block;
+}
+
+.card h3 { padding: 10px; }
+.card p { padding: 0 10px 10px; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* VIDEOS */
+.videos {
+    padding: 30px 16px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>🏠 SmartHomes</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Listings</a>
+        <a href="#">Bookings</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Find Your Perfect Stay</h1>
+    <div class="search">
+        <input type="text" placeholder="Search Nairobi...">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- LISTINGS -->
+<div class="listings">
+    <h2>Popular Stays</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+            <h3>Luxury Apartment</h3>
+            <p>Nairobi • Ksh 5,000/night</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+            <h3>Cozy Studio</h3>
+            <p>Westlands • Ksh 3,000/night</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+            <h3>Modern Villa</h3>
+            <p>Kilimani • Ksh 8,000/night</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+            <h3>City View Condo</h3>
+            <p>CBD • Ksh 4,500/night</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<!-- AIRBNB TOURS (YouTube embeds) -->
+<div class="videos">
+    <h2>Airbnb Tours</h2>
+    <p>Explore these tours to get a feel for different stays. Replace the VIDEO_ID_... placeholders with real YouTube video IDs.</p>
+
+    <div class="video-grid">
+        <div class="video-wrapper">
+            <!-- Ryan Trahan — I Tried Every Airbnb Category -->
+            <iframe src="https://www.youtube.com/embed/9ZXzsjeRtdk" title="Airbnb Tour 1 - Ryan Trahan" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <!-- Never Before Seen Floor plan! Airbnb Cabin Tour! (Levi Kelly Tours) -->
+            <iframe src="https://www.youtube.com/embed/41FbSm-TkYE" title="Airbnb Tour 2 - Cabin Tour" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <!-- Architectural Digest — Inside a Woodland Home Built Over Water -->
+            <iframe src="https://www.youtube.com/embed/OgribLSWhNE" title="Airbnb Tour 3 - Woodland Home (Architectural Digest)" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+<footer>
+    📞 0718292182 | 📧 smarthomesairbnbs@gmail.com
+</footer>
+
+</body>
+</html>
