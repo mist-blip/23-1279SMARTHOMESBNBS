@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHomes BnBs – Explore</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar"></nav>
+
+<div class="page-banner">
+  <h1>🔍 Explore Properties</h1>
+  <p>Discover your perfect home from our curated collection across Kenya</p>
+</div>
+
+<!-- FILTER BAR -->
+<section class="section" style="padding-bottom:0">
+  <div class="glass" style="padding:24px;display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
+    <div class="form-group" style="margin:0;flex:1;min-width:140px">
+      <label>Location</label>
+      <select>
+        <option>All Locations</option>
+        <option>Nairobi</option>
+        <option>Mombasa</option>
+        <option>Naivasha</option>
+        <option>Diani</option>
+        <option>Nakuru</option>
+        <option>Lamu</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin:0;flex:1;min-width:140px">
+      <label>Property Type</label>
+      <select>
+        <option>All Types</option>
+        <option>Villa</option>
+        <option>Apartment</option>
+        <option>Cabin</option>
+        <option>Beach House</option>
+        <option>Farmhouse</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin:0;flex:1;min-width:140px">
+      <label>Max Price / Night</label>
+      <select>
+        <option>Any Price</option>
+        <option>Under $80</option>
+        <option>$80 – $120</option>
+        <option>$120 – $200</option>
+        <option>$200+</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin:0;flex:1;min-width:140px">
+      <label>Guests</label>
+      <input type="number" placeholder="How many?" min="1" max="20"/>
+    </div>
+    <button class="btn-primary" onclick="showToast('Filters applied! 🎯')">Apply Filters</button>
+  </div>
+</section>
+
+<!-- PROPERTY GRID (4 columns) -->
+<section class="section">
+  <h2 class="section-title">All Properties</h2>
+  <p class="section-sub">Showing 8 of 500+ available homes</p>
+  <div class="col-4">
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80" alt="Ocean Villa"/>
+      <div class="card-body">
+        <span class="tag">Luxury</span>
+        <h3>Ocean Villa</h3>
+        <p class="location">📍 Diani Beach</p>
+        <div class="rating">★★★★★</div>
+        <p class="price">$200/night</p>
+        <button class="btn-book" onclick="showToast('Booking Ocean Villa... 🏖️')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&q=80" alt="City Apartment"/>
+      <div class="card-body">
+        <span class="tag">Modern</span>
+        <h3>City Apartment</h3>
+        <p class="location">📍 Nairobi</p>
+        <div class="rating">★★★★☆</div>
+        <p class="price">$80/night</p>
+        <button class="btn-book" onclick="showToast('Booking City Apartment... 🏙️')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=500&q=80" alt="Lakeside Cabin"/>
+      <div class="card-body">
+        <span class="tag">Nature</span>
+        <h3>Lakeside Cabin</h3>
+        <p class="location">📍 Naivasha</p>
+        <div class="rating">★★★★★</div>
+        <p class="price">$90/night</p>
+        <button class="btn-book" onclick="showToast('Booking Lakeside Cabin... 🌲')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&q=80" alt="Beach House"/>
+      <div class="card-body">
+        <span class="tag">Beach</span>
+        <h3>Tropical Beach House</h3>
+        <p class="location">📍 Mombasa</p>
+        <div class="rating">★★★★☆</div>
+        <p class="price">$120/night</p>
+        <button class="btn-book" onclick="showToast('Booking Beach House... 🌊')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=500&q=80" alt="Farmhouse"/>
+      <div class="card-body">
+        <span class="tag">Rural</span>
+        <h3>Rustic Farmhouse</h3>
+        <p class="location">📍 Nakuru</p>
+        <div class="rating">★★★★☆</div>
+        <p class="price">$70/night</p>
+        <button class="btn-book" onclick="showToast('Booking Farmhouse... 🌾')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=500&q=80" alt="Penthouse"/>
+      <div class="card-body">
+        <span class="tag">Premium</span>
+        <h3>Penthouse Suite</h3>
+        <p class="location">📍 Nairobi CBD</p>
+        <div class="rating">★★★★★</div>
+        <p class="price">$250/night</p>
+        <button class="btn-book" onclick="showToast('Booking Penthouse... 🌆')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80" alt="Eco Lodge"/>
+      <div class="card-body">
+        <span class="tag">Eco</span>
+        <h3>Eco Safari Lodge</h3>
+        <p class="location">📍 Amboseli</p>
+        <div class="rating">★★★★★</div>
+        <p class="price">$160/night</p>
+        <button class="btn-book" onclick="showToast('Booking Eco Lodge... 🦁')">Book</button>
+      </div>
+    </div>
+
+    <div class="glass listing-card">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=500&q=80" alt="Smart Villa"/>
+      <div class="card-body">
+        <span class="tag">Smart</span>
+        <h3>Smart Tech Villa</h3>
+        <p class="location">📍 Karen, Nairobi</p>
+        <div class="rating">★★★★★</div>
+        <p class="price">$180/night</p>
+        <button class="btn-book" onclick="showToast('Booking Smart Villa... 🤖')">Book</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AMENITIES COMPARISON TABLE -->
+<section class="section" style="padding-top:0">
+  <h2 class="section-title">🛎️ Amenities Comparison</h2>
+  <p class="section-sub">See what each property offers at a glance</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th><th>WiFi</th><th>Pool</th><th>Kitchen</th>
+          <th>Parking</th><th>AC</th><th>Breakfast</th><th>Pet Friendly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ocean Villa</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+        <tr><td>City Apartment</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Lakeside Cabin</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Beach House</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td></tr>
+        <tr><td>Farmhouse</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Penthouse</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+        <tr><td>Eco Lodge</td><td>✅</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Smart Villa</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<div id="toast"></div>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="shared.js"></script>
+<script>renderNav('explore.html'); renderFooter();</script>
+</body>
+</html>
