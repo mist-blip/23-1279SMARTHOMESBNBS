@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHomes BnBs – Bookings</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar"></nav>
+
+<div class="page-banner">
+  <h1>📅 Make a Booking</h1>
+  <p>Reserve your dream stay in just a few clicks</p>
+</div>
+
+<section class="section">
+  <div class="col-2">
+
+    <!-- BOOKING FORM -->
+    <div class="glass" style="padding:32px">
+      <h2 class="section-title" style="text-align:left;margin-bottom:6px">New Reservation</h2>
+      <p style="color:#c9a882;font-size:0.88rem;margin-bottom:24px">Fill in your details to confirm your booking</p>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="e.g. John Kamau" id="guestName"/>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+254 700 000 000"/>
+      </div>
+      <div class="form-group">
+        <label>Select Property</label>
+        <select id="propSelect">
+          <option value="">-- Choose a property --</option>
+          <option>🏖️ Ocean Villa — Diani ($200/night)</option>
+          <option>🏙️ City Apartment — Nairobi ($80/night)</option>
+          <option>🌲 Lakeside Cabin — Naivasha ($90/night)</option>
+          <option>🌊 Beach House — Mombasa ($120/night)</option>
+          <option>🌾 Farmhouse — Nakuru ($70/night)</option>
+          <option>🌆 Penthouse — Nairobi CBD ($250/night)</option>
+          <option>🦁 Eco Lodge — Amboseli ($160/night)</option>
+          <option>🤖 Smart Villa — Karen ($180/night)</option>
+        </select>
+      </div>
+      <div class="col-2" style="gap:14px">
+        <div class="form-group" style="margin:0">
+          <label>Check-In Date</label>
+          <input type="date" id="checkIn"/>
+        </div>
+        <div class="form-group" style="margin:0">
+          <label>Check-Out Date</label>
+          <input type="date" id="checkOut"/>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:14px">
+        <label>Number of Guests</label>
+        <input type="number" placeholder="1" min="1" max="20" id="numGuests"/>
+      </div>
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea rows="3" placeholder="Any special requirements? (e.g. early check-in, baby cot...)"></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%" onclick="submitBooking()">
+        🔥 Confirm Booking
+      </button>
+    </div>
+
+    <!-- BOOKING INFO + POLICIES -->
+    <div>
+      <div class="glass" style="padding:28px;margin-bottom:24px">
+        <h3 style="color:#ff8c32;font-family:'Playfair Display',serif;margin-bottom:16px">📌 Booking Policies</h3>
+        <div class="para-card" style="margin-bottom:12px">
+          <h4>✅ Free Cancellation</h4>
+          Cancel up to <span class="highlight">48 hours before check-in</span> for a full refund. Late cancellations may incur a one-night fee.
+        </div>
+        <div class="para-card" style="margin-bottom:12px">
+          <h4>🕐 Check-In / Check-Out</h4>
+          Standard check-in is <span class="highlight">2:00 PM</span> and check-out is <span class="highlight">11:00 AM</span>. Early/late arrangements available on request.
+        </div>
+        <div class="para-card" style="margin-bottom:12px">
+          <h4>💳 Payment Methods</h4>
+          We accept <span class="highlight">M-Pesa, Visa, Mastercard</span> and bank transfers. Payment is secured via 256-bit SSL encryption.
+        </div>
+        <div class="para-card">
+          <h4>🏠 House Rules</h4>
+          No smoking indoors. Pets allowed only in pet-friendly properties. Quiet hours from <span class="highlight">10 PM – 7 AM</span>.
+        </div>
+      </div>
+
+      <!-- QUICK STATS -->
+      <div class="glass" style="padding:24px">
+        <h3 style="color:#ff8c32;font-family:'Playfair Display',serif;margin-bottom:16px">📊 Booking Stats</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:center">
+          <div style="background:rgba(255,140,50,0.1);border-radius:12px;padding:16px">
+            <div style="font-size:1.8rem;color:#ff8c32;font-family:'Playfair Display',serif">1,240</div>
+            <div style="color:#c9a882;font-size:0.82rem">Bookings This Month</div>
+          </div>
+          <div style="background:rgba(255,140,50,0.1);border-radius:12px;padding:16px">
+            <div style="font-size:1.8rem;color:#ff8c32;font-family:'Playfair Display',serif">98%</div>
+            <div style="color:#c9a882;font-size:0.82rem">Satisfaction Rate</div>
+          </div>
+          <div style="background:rgba(255,140,50,0.1);border-radius:12px;padding:16px">
+            <div style="font-size:1.8rem;color:#ff8c32;font-family:'Playfair Display',serif">3.2</div>
+            <div style="color:#c9a882;font-size:0.82rem">Avg. Nights Stayed</div>
+          </div>
+          <div style="background:rgba(255,140,50,0.1);border-radius:12px;padding:16px">
+            <div style="font-size:1.8rem;color:#ff8c32;font-family:'Playfair Display',serif">$115</div>
+            <div style="color:#c9a882;font-size:0.82rem">Avg. Nightly Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOKINGS TABLE -->
+<section class="section" style="padding-top:0">
+  <h2 class="section-title">📋 All Bookings</h2>
+  <p class="section-sub">Complete booking history and status tracker</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th><th>Guest</th><th>Property</th><th>Location</th>
+          <th>Check-In</th><th>Check-Out</th><th>Nights</th><th>Total</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>#BNB001</td><td>John Kamau</td><td>Ocean Villa</td><td>Diani</td><td>12 Aug</td><td>16 Aug</td><td>4</td><td>$800</td><td><span class="badge badge-green">Confirmed</span></td></tr>
+        <tr><td>#BNB002</td><td>Mary Wanjiku</td><td>Lakeside Cabin</td><td>Naivasha</td><td>15 Aug</td><td>18 Aug</td><td>3</td><td>$270</td><td><span class="badge badge-green">Confirmed</span></td></tr>
+        <tr><td>#BNB003</td><td>Alex Odhiambo</td><td>City Apartment</td><td>Nairobi</td><td>20 Aug</td><td>22 Aug</td><td>2</td><td>$160</td><td><span class="badge badge-orange">Pending</span></td></tr>
+        <tr><td>#BNB004</td><td>Grace Achieng</td><td>Beach House</td><td>Mombasa</td><td>25 Aug</td><td>30 Aug</td><td>5</td><td>$600</td><td><span class="badge badge-red">Cancelled</span></td></tr>
+        <tr><td>#BNB005</td><td>Brian Mutua</td><td>Farmhouse</td><td>Nakuru</td><td>01 Sep</td><td>05 Sep</td><td>4</td><td>$280</td><td><span class="badge badge-green">Confirmed</span></td></tr>
+        <tr><td>#BNB006</td><td>Amina Hassan</td><td>Penthouse</td><td>Nairobi CBD</td><td>10 Sep</td><td>12 Sep</td><td>2</td><td>$500</td><td><span class="badge badge-orange">Pending</span></td></tr>
+        <tr><td>#BNB007</td><td>Peter Njoroge</td><td>Eco Lodge</td><td>Amboseli</td><td>18 Sep</td><td>21 Sep</td><td>3</td><td>$480</td><td><span class="badge badge-green">Confirmed</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<div id="toast"></div>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="shared.js"></script>
+<script>
+  renderNav('bookings.html');
+  renderFooter();
+
+  function submitBooking() {
+    const name = document.getElementById('guestName').value.trim();
+    const prop = document.getElementById('propSelect').value;
+    if (!name || !prop) {
+      showToast('⚠️ Please fill in all required fields!');
+      return;
+    }
+    showToast(`🎉 Booking confirmed for ${name}!`);
+  }
+</script>
+</body>
+</html>
