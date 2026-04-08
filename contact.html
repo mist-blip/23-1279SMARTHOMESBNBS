@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHomes BnBs – Contact</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="navbar"></nav>
+
+<div class="page-banner">
+  <h1>📞 Contact Us</h1>
+  <p>We're always here to help — reach out anytime</p>
+</div>
+
+<section class="section">
+  <div class="col-2">
+
+    <!-- CONTACT FORM -->
+    <div class="glass" style="padding:32px">
+      <h2 class="section-title" style="text-align:left;margin-bottom:6px">Send Us a Message</h2>
+      <p style="color:#c9a882;font-size:0.88rem;margin-bottom:24px">Fill in the form and we'll get back to you within 24 hours</p>
+
+      <div class="form-group">
+        <label>Your Full Name</label>
+        <input type="text" id="contactName" placeholder="e.g. John Kamau"/>
+      </div>
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" id="contactEmail" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select id="contactSubject">
+          <option value="">-- Select a subject --</option>
+          <option>Booking Inquiry</option>
+          <option>Property Listing</option>
+          <option>Payment Issue</option>
+          <option>Cancellation Request</option>
+          <option>General Question</option>
+          <option>Partnership Opportunity</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea id="contactMsg" rows="5" placeholder="Write your message here..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%" onclick="sendMessage()">
+        🔥 Send Message
+      </button>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+
+      <!-- CALL -->
+      <a href="tel:+254722986754" style="text-decoration:none">
+        <div class="glass" style="padding:28px;display:flex;align-items:center;gap:20px;cursor:pointer;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0">📞</div>
+          <div>
+            <p style="color:#c9a882;font-size:0.82rem;margin-bottom:4px">CALL US ANYTIME</p>
+            <h3 style="color:#ff8c32;font-size:1.3rem;font-family:'Playfair Display',serif">0722 986 754</h3>
+            <p style="color:#e8d5c0;font-size:0.85rem;margin-top:4px">Mon – Sun · 7:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- EMAIL -->
+      <a href="mailto:smarhomesbnbs@gmail.com" style="text-decoration:none">
+        <div class="glass" style="padding:28px;display:flex;align-items:center;gap:20px;cursor:pointer;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0">✉️</div>
+          <div>
+            <p style="color:#c9a882;font-size:0.82rem;margin-bottom:4px">EMAIL US</p>
+            <h3 style="color:#ff8c32;font-size:1.1rem;font-family:'Playfair Display',serif">smarhomesbnbs@gmail.com</h3>
+            <p style="color:#e8d5c0;font-size:0.85rem;margin-top:4px">We reply within 24 hours</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/254722986754?text=Hello%20SmartHomes%20BnBs%2C%20I%20would%20like%20to%20inquire%20about%20a%20property." target="_blank" style="text-decoration:none">
+        <div class="glass" style="padding:28px;display:flex;align-items:center;gap:20px;cursor:pointer;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0">💬</div>
+          <div>
+            <p style="color:#c9a882;font-size:0.82rem;margin-bottom:4px">WHATSAPP US</p>
+            <h3 style="color:#25d366;font-size:1.3rem;font-family:'Playfair Display',serif">0722 986 754</h3>
+            <p style="color:#e8d5c0;font-size:0.85rem;margin-top:4px">Chat with us instantly on WhatsApp</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- OFFICE HOURS -->
+      <div class="glass" style="padding:28px">
+        <h3 style="color:#ff8c32;font-family:'Playfair Display',serif;margin-bottom:16px">🕐 Office Hours</h3>
+        <table style="width:100%;background:transparent;border-radius:0">
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,140,50,0.12)">
+              <td style="padding:8px 0;color:#c9a882">Monday – Friday</td>
+              <td style="padding:8px 0;color:#ff8c32;text-align:right">8:00 AM – 6:00 PM</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,140,50,0.12)">
+              <td style="padding:8px 0;color:#c9a882">Saturday</td>
+              <td style="padding:8px 0;color:#ff8c32;text-align:right">9:00 AM – 4:00 PM</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0;color:#c9a882">Sunday</td>
+              <td style="padding:8px 0;color:#ff8c32;text-align:right">10:00 AM – 2:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <h2 class="section-title">❓ Frequently Asked Questions</h2>
+  <p class="section-sub">Quick answers to common questions</p>
+  <div class="col-2">
+    <div class="para-card">
+      <h4>How do I make a booking?</h4>
+      Go to the <a href="bookings.html" style="color:#ff8c32">Bookings page</a>, fill in your details, select a property and confirm. You'll receive a confirmation via email or call <span class="highlight">0722 986 754</span>.
+    </div>
+    <div class="para-card">
+      <h4>Can I cancel my booking?</h4>
+      Yes! Free cancellation is available up to <span class="highlight">48 hours before check-in</span>. Contact us at <span class="highlight">smarhomesbnbs@gmail.com</span> or call us to process your cancellation.
+    </div>
+    <div class="para-card">
+      <h4>How do I list my property?</h4>
+      Send us an email at <span class="highlight">smarhomesbnbs@gmail.com</span> with photos and details of your property. Our team will review and get back to you within 48 hours.
+    </div>
+    <div class="para-card">
+      <h4>What payment methods do you accept?</h4>
+      We accept <span class="highlight">M-Pesa, Visa, Mastercard</span> and bank transfers. For M-Pesa payments, call <span class="highlight">0722 986 754</span> for the paybill details.
+    </div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<div id="toast"></div>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="shared.js"></script>
+<script>
+  renderNav('contact.html');
+  renderFooter();
+
+  function sendMessage() {
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value;
+    const msg = document.getElementById('contactMsg').value.trim();
+
+    if (!name || !email || !subject || !msg) {
+      showToast('⚠️ Please fill in all fields!');
+      return;
+    }
+
+    // Open default mail client with pre-filled message
+    const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+    window.location.href = `mailto:smarhomesbnbs@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailBody}`;
+    showToast('📧 Opening your email client...');
+  }
+</script>
+</body>
+</html>
