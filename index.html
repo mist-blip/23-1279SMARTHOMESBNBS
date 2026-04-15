@@ -1,208 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-    <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment1.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 1</a>
+  <meta charset="UTF-8"/>
+  <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment1.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 1</a>
    <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment2.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 2</a>
    <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment3.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 3</a>
    <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment4.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 4</a>
    <a href="https://mist-blip.github.io/23-1279SMARTHOMESBNBS/assignment5.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 5</a>
-  <header>
-<title>SmartHomes Airbnb</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #121212;
-    color: white;
-}
-
-/* NAVBAR */
-nav {
-    background: #ff385c;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav h2 {
-    margin: 0;
-}
-
-nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px;
-    background: url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae') center/cover;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.search input {
-    padding: 10px;
-    width: 200px;
-}
-
-/* LISTINGS */
-.listings {
-    padding: 30px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1e1e1e;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-}
-
-.card h3 {
-    padding: 10px;
-}
-
-.card p {
-    padding: 0 10px 10px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-}
-
-/* VIDEOS */
-.videos {
-    padding: 30px;
-}
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-}
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-</style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHomes BnBs – About</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>🏠 SmartHomes</h2>
+<nav id="navbar"></nav>
+
+<div class="page-banner">
+  <h1>🏡 About SmartHomes BnBs</h1>
+  <p>Our story, mission, and the team behind your perfect stay</p>
+</div>
+
+<!-- MISSION + STORY (2 columns) -->
+<section class="section">
+  <div class="col-2">
     <div>
-        <a href="#">Home</a>
-        <a href="#">Listings</a>
-        <a href="#">Bookings</a>
-        <a href="#">Contact</a>
+      <h2 class="section-title" style="text-align:left">Our Story</h2>
+      <div class="flame-divider" style="text-align:left;margin-bottom:20px">🔥</div>
+
+      <div class="para-card">
+        <h4>🌱 How It All Started</h4>
+        SmartHomes BnBs was founded in <span class="highlight">2020</span> by a group of passionate Kenyan travelers who were frustrated by the lack of quality, affordable short-term rentals. We set out to change that — one cozy home at a time.
+      </div>
+
+      <div class="para-card">
+        <h4>🎯 Our Mission</h4>
+        Our mission is to <span class="highlight">connect travelers with authentic, comfortable homes</span> across Kenya while empowering local homeowners to earn income from their properties. We believe every traveler deserves a place that feels like home.
+      </div>
+
+      <div class="para-card">
+        <h4>🌍 Our Vision</h4>
+        We envision a Kenya where <span class="highlight">every corner of the country</span> is accessible to travelers through a network of trusted, verified, and beautifully maintained homes. From Turkana to Mombasa — we're building that future.
+      </div>
+
+      <div class="para-card">
+        <h4>💡 What Makes Us Smart</h4>
+        The "Smart" in SmartHomes isn't just about technology — it's about <span class="highlight">smart choices</span>: smart pricing, smart hosts, smart experiences. We use data and community feedback to continuously improve every listing on our platform.
+      </div>
+
+      <div class="para-card">
+        <h4>🤝 Community First</h4>
+        We are deeply committed to the communities we operate in. A portion of every booking goes to <span class="highlight">local community development funds</span>, supporting schools, clean water projects, and small businesses near our properties.
+      </div>
     </div>
-</nav>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Find Your Perfect Stay</h1>
-    <div class="search">
-        <input type="text" placeholder="Search Nairobi...">
-        <button>Search</button>
+    <div>
+      
+
+      <!-- VALUES -->
+      <div class="glass" style="padding:28px">
+        <h3 style="color:#ff8c32;font-family:'Playfair Display',serif;margin-bottom:20px">🌟 Our Core Values</h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(255,140,50,0.08);border-radius:10px">
+            <span style="font-size:1.8rem">🔥</span>
+            <div><strong style="color:#ff8c32">Warmth</strong><br/><small style="color:#c9a882">Every guest is treated like family</small></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(255,140,50,0.08);border-radius:10px">
+            <span style="font-size:1.8rem">🛡️</span>
+            <div><strong style="color:#ff8c32">Trust</strong><br/><small style="color:#c9a882">Verified hosts, secure payments</small></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(255,140,50,0.08);border-radius:10px">
+            <span style="font-size:1.8rem">♻️</span>
+            <div><strong style="color:#ff8c32">Sustainability</strong><br/><small style="color:#c9a882">Eco-conscious travel choices</small></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(255,140,50,0.08);border-radius:10px">
+            <span style="font-size:1.8rem">🌍</span>
+            <div><strong style="color:#ff8c32">Community</strong><br/><small style="color:#c9a882">Supporting local economies</small></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(255,140,50,0.08);border-radius:10px">
+            <span style="font-size:1.8rem">💡</span>
+            <div><strong style="color:#ff8c32">Innovation</strong><br/><small style="color:#c9a882">Smart tech for better stays</small></div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- LISTINGS -->
-<div class="listings">
-    <h2>Popular Stays</h2>
+<div class="flame-divider">🔥 🔥 🔥</div>
 
-    <div class="grid">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-            <h3>Luxury Apartment</h3>
-            <p>Nairobi • Ksh 5,000/night</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
-            <h3>Cozy Studio</h3>
-            <p>Westlands • Ksh 3,000/night</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
-            <h3>Modern Villa</h3>
-            <p>Kilimani • Ksh 8,000/night</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-            <h3>City View Condo</h3>
-            <p>CBD • Ksh 4,500/night</p>
-        </div>
-
+<!-- TEAM -->
+<section class="section" style="padding-top:0">
+  <h2 class="section-title">👥 Meet the Team</h2>
+  <p class="section-sub">The passionate people behind SmartHomes BnBs</p>
+  <div class="col-4">
+    <div class="glass" style="padding:24px;text-align:center">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 14px">👨‍💼</div>
+      <h3 style="color:#fff;font-size:1rem">James Kariuki</h3>
+      <p style="color:#ff8c32;font-size:0.82rem;margin:4px 0">CEO & Co-Founder</p>
+      <p style="color:#c9a882;font-size:0.8rem">Visionary leader with 10+ years in hospitality</p>
     </div>
-</div>
-
-<!-- FOOTER -->
-<!-- AIRBNB TOURS (YouTube embeds) -->
-<div class="videos">
-    <h2>Airbnb Tours</h2>
-    <p>Explore these tours to get a feel for different stays. Replace the VIDEO_ID_... placeholders with real YouTube video IDs.</p>
-
-    <div class="video-grid">
-        <div class="video-wrapper">
-            <!-- Ryan Trahan — I Tried Every Airbnb Category -->
-            <iframe src="https://www.youtube.com/embed/9ZXzsjeRtdk" title="Airbnb Tour 1 - Ryan Trahan" allowfullscreen loading="lazy"></iframe>
-        </div>
-
-        <div class="video-wrapper">
-            <!-- Never Before Seen Floor plan! Airbnb Cabin Tour! (Levi Kelly Tours) -->
-            <iframe src="https://www.youtube.com/embed/41FbSm-TkYE" title="Airbnb Tour 2 - Cabin Tour" allowfullscreen loading="lazy"></iframe>
-        </div>
-
-        <div class="video-wrapper">
-            <!-- Architectural Digest — Inside a Woodland Home Built Over Water -->
-            <iframe src="https://www.youtube.com/embed/OgribLSWhNE" title="Airbnb Tour 3 - Woodland Home (Architectural Digest)" allowfullscreen loading="lazy"></iframe>
-        </div>
+    <div class="glass" style="padding:24px;text-align:center">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 14px">👩‍💻</div>
+      <h3 style="color:#fff;font-size:1rem">Amina Osei</h3>
+      <p style="color:#ff8c32;font-size:0.82rem;margin:4px 0">CTO & Co-Founder</p>
+      <p style="color:#c9a882;font-size:0.8rem">Full-stack developer & smart home enthusiast</p>
     </div>
-</div>
+    <div class="glass" style="padding:24px;text-align:center">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 14px">👨‍🎨</div>
+      <h3 style="color:#fff;font-size:1rem">Brian Otieno</h3>
+      <p style="color:#ff8c32;font-size:0.82rem;margin:4px 0">Head of Design</p>
+      <p style="color:#c9a882;font-size:0.8rem">Award-winning UX designer & travel blogger</p>
+    </div>
+    <div class="glass" style="padding:24px;text-align:center">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#ee0979);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 14px">👩‍💼</div>
+      <h3 style="color:#fff;font-size:1rem">Grace Muthoni</h3>
+      <p style="color:#ff8c32;font-size:0.82rem;margin:4px 0">Head of Operations</p>
+      <p style="color:#c9a882;font-size:0.8rem">Ensures every stay exceeds expectations</p>
+    </div>
+  </div>
+</section>
 
-<footer>
-    📞 0718292182 | 📧 smarthomesairbnbs@gmail.com
-</footer>
+<!-- MILESTONES TABLE -->
+<section class="section" style="padding-top:0">
+  <h2 class="section-title">🏆 Our Milestones</h2>
+  <p class="section-sub">Key achievements since our founding</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Year</th><th>Milestone</th><th>Impact</th><th>Cities</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2020</td><td>🚀 Company Founded</td><td>10 properties listed</td><td>Nairobi</td></tr>
+        <tr><td>2021</td><td>📱 Mobile App Launched</td><td>500+ downloads in week 1</td><td>Nairobi, Mombasa</td></tr>
+        <tr><td>2022</td><td>🌍 Coastal Expansion</td><td>100+ beach properties</td><td>+Diani, Malindi, Lamu</td></tr>
+        <tr><td>2023</td><td>🏆 Best BnB Platform Award</td><td>12,000 happy guests</td><td>Nationwide</td></tr>
+        <tr><td>2024</td><td>♻️ Eco-Homes Initiative</td><td>50 certified eco properties</td><td>Nationwide</td></tr>
+        <tr><td>2025</td><td>🤖 Smart Home Integration</td><td>AI-powered recommendations</td><td>Nationwide</td></tr>
+        <tr><td>2026</td><td>🌐 East Africa Expansion</td><td>Tanzania & Uganda launch</td><td>Regional</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
+<footer id="footer"></footer>
+<div id="toast"></div>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="shared.js"></script>
+<script>renderNav('about.html'); renderFooter();</script>
 </body>
 </html>
-      
-        
